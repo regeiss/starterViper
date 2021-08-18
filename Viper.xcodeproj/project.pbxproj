@@ -140,6 +140,8 @@
 		18D775BF22AD944300AE281E /* Viper */ = {
 			isa = PBXGroup;
 			children = (
+				0AEABEDA23EF7E1B00FD3972 /* Data Sources */,
+				0A8BE47D23ECC56F00C24F52 /* Entities */,
 				0A8BE47C23ECC55F00C24F52 /* Functional Views */,
 				E1F236BC26CB00CF00A86BB7 /* Presenterss */,
 				E1F236C926CC572800A86BB7 /* Routers */,
@@ -147,8 +149,6 @@
 				18D775C022AD944300AE281E /* AppDelegate.swift */,
 				18D775C222AD944300AE281E /* SceneDelegate.swift */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
-				0A8BE47D23ECC56F00C24F52 /* Entities */,
-				0AEABEDA23EF7E1B00FD3972 /* Data Sources */,
 				0A20EFA9240EA73A00A0CA27 /* WaypointModule */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
