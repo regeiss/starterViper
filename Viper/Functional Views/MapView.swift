@@ -29,18 +29,21 @@
 import SwiftUI
 import MapKit
 
-struct MapView: UIViewRepresentable {
+struct MapView: UIViewRepresentable
+{
   var pins: [MKAnnotation] = []
   var routes: [MKRoute]?
   var center: CLLocationCoordinate2D?
 
-  func makeUIView(context: Context) -> MKMapView {
+  func makeUIView(context: Context) -> MKMapView
+  {
     let mapView = MKMapView()
     mapView.delegate = context.coordinator
     return mapView
   }
 
-  func updateUIView(_ view: MKMapView, context: Context) {
+  func updateUIView(_ view: MKMapView, context: Context)
+  {
     view.removeAnnotations(view.annotations)
     view.removeOverlays(view.overlays)
     if let center = center {
@@ -87,10 +90,12 @@ struct MapView: UIViewRepresentable {
   }
 }
 
-fileprivate class CoordinateWrapper: NSObject, MKAnnotation {
+fileprivate class CoordinateWrapper: NSObject, MKAnnotation
+{
   var coordinate: CLLocationCoordinate2D
 
-  init(_ coordinate: CLLocationCoordinate2D) {
+  init(_ coordinate: CLLocationCoordinate2D)
+  {
     self.coordinate = coordinate
   }
 }
