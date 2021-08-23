@@ -34,7 +34,14 @@ struct TripDetailView: View
     
     var body: some View
     {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack
+        {
+            TextField("Trip name:", text: presenter.setTripName)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            padding([.horizontal])
+        }
+        .navigationBarTitle(Text(presenter.tripName), displayMode: .inline)
+        .navigationBarItems(trailing: Button("Save", action: presenter.save))
     }
 }
 
