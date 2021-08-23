@@ -37,6 +37,9 @@ class TripDetailsPresenter: ObservableObject
     private var cancellables = Set<AnyCancellable>()
     let setTripName: Binding<String>
     
+    @Published var distanceLabel: String = "Calculating..."
+    @Published var waypoints: [Waypoint] = []
+    
     init(interactor: TripDetailInteractor)
     {
         self.interactor = interactor
@@ -54,5 +57,11 @@ class TripDetailsPresenter: ObservableObject
     {
         interactor.save()
     }
+    
+    func makeMapView() -> some View
+    {
+            TripMapView(presenter: TripMapViewPresenter(interactor: interactor))
+    }
+    
 }
 

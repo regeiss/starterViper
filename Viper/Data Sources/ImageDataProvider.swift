@@ -49,7 +49,8 @@ class PixabayImageDataProvider: ImageDataProvider
 {
   let apiKey = "22952676-e321ff726e21afb34a392ca4b"
 
-  private func searchURL(query: String) -> URL {
+  private func searchURL(query: String) -> URL
+  {
     var components = URLComponents(string: "https://pixabay.com/api")!
     components.queryItems = [
       URLQueryItem(name: "key", value: apiKey),
